@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: billimatic_development
+  host: localhost
+  pool: 5432
+  username: thomasgalibert
+  password: totolasito
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: billimatic_test
+  host: localhost
+  pool: 5432
+  username: thomasgalibert
+  password: totolasito
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: billimatic_test
+  host: localhost
+  pool: 5432
+  username: thomasgalibert
+  password: totolasito

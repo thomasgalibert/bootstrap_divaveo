@@ -1,0 +1,32 @@
+<%= form_for @company do |f| %>
+
+  <%= render "/includes/errors", object: @company %>
+
+  <!-- Main form for the company -->
+  <fieldset id="" class="panel">
+    <legend><%= t('company.legends.new') %></legend>
+    <%= f.text_field :name, placeholder: t('company.placeholders.name') %>
+    <%= f.email_field :email, placeholder: t('company.placeholders.email') %>
+    <%= f.text_area :street, placeholder: t('company.placeholders.street'), rows: "3" %>
+  
+    <div class="row">
+      <div class="small-6 columns"><%= f.text_field :zipcode, placeholder: t('company.placeholders.zipcode') %></div>
+      <div class="small-6 columns"><%= f.text_field :town, placeholder: t('company.placeholders.town') %></div>  
+    </div>  
+  
+    <%= f.country_select :country, priority_countries: ["FR", "US"] %>
+    <%= f.text_field :number, placeholder: t('company.placeholders.number') %>    
+    <%= f.check_box :cgv %> <%= f.label :cgv, "#{t('company.labels.question_cgv')}" %> <%= link_to t('company.labels.cgv'), '#' %>
+  </fieldset>
+  
+  <!-- Form for the main user -->  
+  <fieldset id="" class="panel">
+    <legend><%= t('company.legends.user_new') %></legend>
+    <%= f.fields_for :users do |builder| %>
+      <%= render 'user_fields', f: builder %>
+    <% end %>  
+    
+    <%= f.submit class: "button success radius" %>
+  </fieldset>
+
+<% end %>

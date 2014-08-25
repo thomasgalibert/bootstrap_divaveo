@@ -1,0 +1,11 @@
+<!-- Login form -->
+<%= form_tag sessions_path do %>
+  <fieldset id="" class="panel">
+    <legend><%= t('session.login') %></legend>
+    <%= email_field_tag :email, params[:email], placeholder: t('session.placeholders.email') %>
+    <%= password_field_tag :password, '', placeholder: t('session.placeholders.password') %>
+    <%= submit_tag t('session.login'), class: "button success" %>  
+  </fieldset>
+  
+<% end %>
+<!-- -->

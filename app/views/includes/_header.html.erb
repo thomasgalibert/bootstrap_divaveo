@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="large-3 columns">
+    <h1><img src="http://placehold.it/400x100&text=Logo"/></h1>
+  </div>
+  <div class="large-9 columns">
+    <ul class="inline-list right header">
+      <li><a href="<%= root_path %>"> <%= fa_icon "home" %> <%= t('menu.home') %></a></li>
+      <li><a href="#"> <%= fa_icon "money" %> <%= t('menu.bills') %></a></li>
+      <li><a href="#"> <%= fa_icon "shopping-cart" %> <%= t('menu.suppliers') %></a></li>
+      <li><a href="#"> <%= fa_icon "users" %> <%= t('menu.clients') %></a></li>
+      <% if current_user %>
+        <li>
+          <a href="#" class="button tiny split"><%= current_user.fullname %> <span data-dropdown="drop"></span></a><br>
+          <ul id="drop" class="f-dropdown" data-dropdown-content>
+            <li><%= link_to t('session.logout'), logout_path %></li>
+            <li><%= link_to t('user.edit_user_menu'), user_path(current_user)  %></li>
+          </ul>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

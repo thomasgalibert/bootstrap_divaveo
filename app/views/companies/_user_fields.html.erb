@@ -1,0 +1,7 @@
+<%= f.email_field :email, placeholder: t('user.labels.email') %>
+<div class="row">
+	<div class="small-6 columns"><%= f.text_field :name, placeholder: t('user.labels.name') %></div>
+	<div class="small-6 columns"><%= f.text_field :firstname, placeholder: t('user.labels.firstname') %>	</div>	
+</div>
+<%= f.password_field :password, placeholder: t('user.labels.password') %>
+<%= f.password_field :password_confirmation, placeholder: t('user.labels.password_confirmation') %>

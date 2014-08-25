@@ -1,0 +1,22 @@
+$main-font: "source-code-pro";
+$link-font: "source-code-pro";
+$title-font: "ff-tisa-web-pro";
+
+body{
+  font-family: $main-font;
+}
+
+a{
+  font-family: $link-font;
+}
+
+h1, h2, h3, h4, h5{
+  font-family: $title-font;
+  font-weight: bold;
+}
+
+.header{
+  a{
+    font-size: 0.8em;
+  }
+}

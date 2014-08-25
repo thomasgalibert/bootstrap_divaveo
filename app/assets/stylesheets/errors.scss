@@ -1,0 +1,15 @@
+$color-error-border: #bd0000;
+$bg-error-panel: #f7e6a3;
+
+.error_explanation{
+  @include panel($bg: $bg-error-panel);
+  li{
+    font-size: 0.8em;
+  }
+}
+
+.field_with_errors{
+  input, textarea{
+    border: 1px solid $color-error-border;    
+  }
+}
